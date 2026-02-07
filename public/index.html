@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard IoT</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <span class="app-title">🌱 Dashboard IoT</span>
+
+      <button id="themeToggle" class="theme-btn">
+        🌙 Dark Mode
+      </button>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <h1>Monitoring Suhu & Kelembapan</h1>
+      <p>Data sensor ESP8266 + DHT11 secara real-time</p>
+    </div>
+
+
+  <div class="cards">
+    <div class="card">
+      <div class="label">🌡 Suhu</div>
+      <div class="value temp" id="suhu">-- °C</div>
+    </div>
+
+    <div class="card">
+      <div class="label">💧 Kelembapan</div>
+      <div class="value hum" id="kelembapan">-- %</div>
+    </div>
+  </div>
+
+  <div class="chart-box">
+    <h3>📈 Grafik Sensor</h3>
+    <canvas id="sensorChart"></canvas>
+  </div>
+
+  <div class="footer">
+    🟢 Status Sensor: <span id="status">ONLINE</span> |
+    ⏱ Last update: <span id="lastUpdate">-</span>
+  </div>
+
+</div>
+
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
